@@ -1,0 +1,262 @@
+
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* shared styles */
+
+/* added animation */
+@keyframes wave-on{
+    0%{
+        background-position: 0%;
+    }
+
+    50%{
+        background-position: 50%;
+    }
+
+    100%{
+        background-position: 100%;
+    }
+}
+
+.font-inter{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body{
+    background-color: #1A0B2E;
+    color: #FFFFFF;
+}
+
+.primary-btn{
+    background: linear-gradient(
+    47.64deg,
+    rgba(247, 233, 63, 1),
+    rgba(251, 9, 180, 1),
+    rgba(145, 0, 248, 1)
+    );
+    border: none;
+    border-radius: 10000px;
+    font-size: 16px;
+    font-weight:600;
+    line-height: 19px;
+    color: white;
+    padding: 12px 16px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+
+    background-size: 300%;
+    animation: wave-on 3s infinite linear;
+}
+
+
+/* main styles */
+
+/* navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 12.5rem;
+}
+
+nav .logo{
+    font-size:1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+
+
+nav .logo .wave{
+    background: linear-gradient(
+    to right,
+    rgba(247, 233, 63, 1),
+    rgba(251, 9, 180, 1),
+    rgba(145, 0, 248, 1)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 300%;
+    animation: wave-on 3s infinite linear;
+
+}
+
+nav .menu{
+    display: flex;
+    list-style-type: none;
+    gap: 32px;
+    align-items: center;
+}
+
+nav .menu a{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+nav .hamburger-menu{
+    display: none;
+}
+
+/* banner section */
+#banner{
+    background-image: url("../assets/hero-bg.png");
+    height: 47.5rem;
+    background-size: cover;
+    background-position: center 30%;
+    padding: 6.25rem auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.banner-set{
+    position: relative;
+}
+
+.banner-set>img{
+    max-width: 25rem;
+    height: 25rem;
+}
+
+.banner-set .mic{
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    padding: 12px 10px;
+    top: 22%;
+    left: 11%;
+}
+
+.banner-set .float-new{
+    background-color: #00FF88;
+    color: #1A0B2E;
+    padding: 8px 16px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 1000px;
+
+    position: absolute;
+    top: 10%;
+    left: 80%;
+}
+
+.banner-content{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.banner-content .banner-title h1{
+    font-size: 3.75rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.banner-content .banner-title p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.banner-content .banner-buttons{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-buttons .transparent-btn{
+    border-radius: 10000px;
+    border-color: #00FF88;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight:600;
+    color: #00FF88;
+    padding: 12px 20px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+/* Responsive media query */
+
+/* small size device */
+@media screen and (max-width:576px) {
+
+    /* navbar */
+    nav .menu, nav .primary-btn{
+        display: none;
+    }
+
+    nav .hamburger-menu{
+        display: inline;
+        margin-right: 10px;
+    }
+
+    nav{
+       padding: 1rem 1.25rem;
+       justify-content: space-between;
+    }
+
+    /* banner section */
+    #banner{
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    padding: 4rem auto;
+    }
+
+    .banner-set>img{
+        max-width: 16rem;
+        height: 16rem;
+    }
+
+    .banner-set .mic>img{
+        position: absolute;
+        width: 6rem;
+        height: 8rem;
+        padding: 6px 5px;
+        right: 53%;
+        top: 4%;
+        
+    }
+
+
+}
+
+/* medium size device */
+@media screen and (min-width: 576px) and (max-width: 992px){
+
+    /* navbar */
+    nav{
+       padding: 1rem 1.25rem;
+       justify-content: space-between;
+    }
+}
