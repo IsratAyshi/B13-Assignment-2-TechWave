@@ -34,6 +34,24 @@ body{
     color: #FFFFFF;
 }
 
+.wave{
+    background: linear-gradient(
+    to right,
+    rgba(247, 233, 63, 1),
+    rgba(251, 9, 180, 1),
+    rgba(145, 0, 248, 1)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 300%;
+    animation: wave-on 3s infinite linear;
+
+}
+
 .primary-btn{
     background: linear-gradient(
     47.64deg,
@@ -75,25 +93,6 @@ nav .logo{
     font-weight: 700;
 }
 
-
-
-nav .logo .wave{
-    background: linear-gradient(
-    to right,
-    rgba(247, 233, 63, 1),
-    rgba(251, 9, 180, 1),
-    rgba(145, 0, 248, 1)
-    );
-
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-
-    background-size: 300%;
-    animation: wave-on 3s infinite linear;
-
-}
 
 nav .menu{
     display: flex;
@@ -413,6 +412,52 @@ nav .hamburger-menu{
     top: 20%;
 }
 
+/* Footer */
+footer{
+    background-image: url("../assets/footer-bg.png");
+    height: 25.75rem;
+    background-size: cover;
+    background-position: center;
+    padding: 7.5rem;
+}
+
+footer .footer-container{
+    /* padding: 7.5rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-container .footer-logo{
+    font-size:2.8rem;
+    line-height: 3.75rem;
+    font-weight: 700;
+}
+
+.footer-container .socials{
+    display: flex;
+    gap: 40px;
+}
+
+.footer-container .socials .social-set{
+    display: flex;
+    gap: 8px;
+}
+
+.footer-container .socials .social-set p{
+    font-size: 1rem;
+    color:rgba(255, 255, 255, 0.6);
+}
+
+.footer-container .copyright p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color:rgba(250, 250, 250, 0.6)
+}
+
 
 /* Responsive media query */
 
@@ -565,6 +610,38 @@ nav .hamburger-menu{
         justify-content: center;
     }
 
+    /* footer section */
+    footer{
+        height: 15.5rem;
+        padding: 2.5rem 1.25rem;
+    }
+
+    footer .footer-container{
+        gap: 1.5rem;
+    }
+
+    .footer-container .footer-logo{
+        font-size:1.5rem;
+        line-height: 2rem;
+    }
+
+    .footer-container .socials{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 0px;
+        row-gap: 16px;
+        /* align-items: center;
+        justify-items: start; */
+    }
+
+    .footer-container .socials .ap{
+        margin-left: -17px;
+    }
+
+    .footer-container .socials .yt{
+        margin-left: 17px;
+    }
+
 
 }
 
@@ -613,6 +690,18 @@ nav .hamburger-menu{
 
     .grid-episode .ep-content{
         gap: 16px;
+    }
+
+    /* footer section */
+    footer{
+        padding: 7.5rem 2rem;
+    }
+
+
+    .footer-container .footer-logo{
+        font-size:2.5rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
     }
 
 }
