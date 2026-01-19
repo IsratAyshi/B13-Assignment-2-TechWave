@@ -180,6 +180,7 @@ nav .hamburger-menu{
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .banner-content .banner-buttons{
@@ -202,6 +203,51 @@ nav .hamburger-menu{
     display: flex;
     justify-content: center;
     gap: 8px;
+}
+
+/* about section */
+#About-container{
+    padding: 3.125rem 12.5rem 7.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#About-container .about-content{
+    margin-bottom: 5rem;
+}
+
+#About-container .about-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+}
+
+#About-container .about-content p,
+.about-cards .ab-card p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+#About-container .about-cards{
+    padding: 5rem 0 7.5rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.about-cards .ab-card h2{
+    color: #00FF88;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem; 
+
 }
 
 
@@ -230,7 +276,7 @@ nav .hamburger-menu{
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center 30%;
-    padding: 4rem auto;
+    padding: 2.5rem 1.25rem;
     }
 
     .banner-set>img{
@@ -248,6 +294,36 @@ nav .hamburger-menu{
         
     }
 
+    /* about section */
+    #About-container{
+        padding: 0.5rem 1.25rem 2.5rem;
+    }
+
+    #About-container .about-content{
+        margin-bottom: 2.5rem;
+    }
+
+    #About-container .about-content h1{
+        font-size: 2rem;
+
+    }
+
+    #About-container .about-content p{
+        line-height: 1.25rem;
+    }
+
+    #About-container .about-content p br{
+        display: none;
+    }
+
+    #About-container .about-cards{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 2.5rem;
+        column-gap: 2.5rem;
+        padding: 2.5rem 0 0 0;
+    }
+
 
 }
 
@@ -258,5 +334,19 @@ nav .hamburger-menu{
     nav{
        padding: 1rem 1.25rem;
        justify-content: space-between;
+    }
+
+    /* about section */
+    #About-container{
+        padding: 2.5rem 1.25rem;
+    }
+
+    #About-container .about-content p br{
+        display: none;
+    }
+
+    #About-container .about-cards{
+        column-gap: 2.5rem;
+        padding: 2.5rem 0  2.5rem;
     }
 }
